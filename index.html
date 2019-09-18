@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="./index.html">
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": ["logo.jpg"]
+      }
+    </script>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+    <style amp-custom>
+      body {
+        font-family: "Raleway", sans-serif;
+      }
+      .cards {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      ul {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+      }
+      ul li {
+        list-style: none;
+        margin: 15px 60px;
+      }
+      ul li a .fa {
+        font-size: 40px;
+        color: #262626;
+        line-height: 80px;
+        transition: 0.5s;
+      }
+      ul li a {
+        position: relative;
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: #ffffff;
+        text-align: center;
+        transform: perspective(1000px) rotate(-30deg) skew(25deg)
+          translate(0, 0);
+        transition: 0.5s;
+        box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+      }
+      ul li a::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        height: 100%;
+        width: 20px;
+        background: #b1b1b1;
+        transition: 0.5s;
+        transform: rotate(0deg) skewY(-45deg);
+      }
+      ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: -10px;
+        height: 20px;
+        width: 100%;
+        background: #b1b1b1;
+        transition: 0.5s;
+        transform: rotate(0deg) skewX(-45deg);
+      }
+      ul li a:hover {
+        transform: perspective(1000px) rotate(-30deg) skew(25deg)
+          translate(20px, -20px);
+        box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+      }
+      ul li:hover .fa {
+        color: white;
+      }
+      ul li:hover:nth-child(1) a {
+        background: #3b5999;
+      }
+      ul li:hover:nth-child(1) a::before {
+        background: #3b5999;
+      }
+      ul li:hover:nth-child(1) a::after {
+        background: #3b5999;
+      }
+      ul li:hover:nth-child(2) a {
+        background: #0077b5;
+      }
+      ul li:hover:nth-child(2) a::before {
+        background: #0077b5;
+      }
+      ul li:hover:nth-child(2) a::after {
+        background: #0077b5;
+      }
+      ul li:hover:nth-child(3) a {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+      }
+      ul li:hover:nth-child(3) a::before {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+      }
+      ul li:hover:nth-child(3) a::after {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+      }
+      ul li:hover:nth-child(4) a {
+        background: #211f1f;
+      }
+      ul li:hover:nth-child(4) a::before {
+        background: #211f1f;
+      }
+      ul li:hover:nth-child(4) a::after {
+        background: #211f1f;
+      }
+      .background {
+        background: #fbc02d;
+        clip-path: polygon(0 91%, 0 0, 100% 7%, 100% 100%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 580px;
+        width: 100%;
+        height: 60%;
+      }
+      .background2 {
+        background: #ff8a65;
+        top: 1500px;
+        clip-path: polygon(0 100%, 0 9%, 100% 0, 100% 91%);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 50%;
+      }
+      section {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        background: #3586ff;
+        overflow: visible;
+      }
+      section .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-size: 800px 100px;
+        background: url("assets/wave.png");
+      }
+      section .wave.wave1 {
+        animation: animate 30s linear infinite;
+        z-index: 1000;
+        opacity: 1;
+        animation-delay: 0s;
+        bottom: 0;
+      }
+      section .wave.wave2 {
+        animation: animate2 15s linear infinite;
+        z-index: 999;
+        opacity: 0.5;
+        animation-delay: -5s;
+        bottom: 10px;
+      }
+      section .wave.wave3 {
+        animation: animate 30s linear infinite;
+        z-index: 998;
+        opacity: 0.2;
+        animation-delay: -2s;
+        bottom: 15;
+      }
+      section .wave.wave4 {
+        animation: animate2 5s linear infinite;
+        z-index: 997;
+        opacity: 0.7;
+        animation-delay: -5s;
+        bottom: 20px;
+      }
+      @keyframes animate {
+        0% {
+          background-position-x: 0;
+        }
+        100% {
+          background-position-x: 1000px;
+        }
+      }
+      @keyframes animate2 {
+        0% {
+          background-position-x: 0;
+        }
+        100% {
+          background-position-x: -1000px;
+        }
+      }
+      .social-logo {
+        position: relative;
+        margin-top: 30px;
+      }
+      .social-logo h2 {
+        font-size: 4rem;
+        font-weight: bolder;
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .container {
+        position: relative;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: auto;
+        grid-gap: 0 40px;
+      }
+      .container .box {
+        position: relative;
+        height: 400px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.9;
+        box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+        margin-top: 20px;
+      }
+      .content {
+        position: relative;
+        padding: 20px;
+      }
+      .content h2 {
+        position: absolute;
+        top: -60px;
+        right: 20px;
+        margin: 0;
+        padding: 0;
+        font-size: 10em;
+        color: rgba(31, 29, 29, 0.1);
+        transition: 0.5s;
+      }
+      .box:hover .content h2 {
+        top: -100px;
+      }
+      .profile {
+        position: absolute;
+        width: 50%;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+        z-index: 1000;
+        min-width: 300px;
+      }
+      .profile amp-img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -20px;
+        margin: auto;
+        z-index: 1000;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+      .profile .box .content h3 {
+        margin-top: 130px;
+        font-size: 30px;
+        font-weight: 800;
+        color: black;
+      }
+      .profile .box p {
+        text-align: left;
+        font-size: 20px;
+        color: rgb(82, 78, 78);
+        margin-bottom: 10px;
+      }
+      .profile:hover amp-img {
+        top: -10px;
+      }
+      .profile .box {
+        background: white;
+        position: relative;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+        margin-top: 20px;
+        border-radius: 5%;
+        text-align: center;
+      }
+      .profile .box::after {
+        content: "";
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        width: 100%;
+        height: 40%;
+        background: #fbc02d;
+        border-top-left-radius: 9%;
+        border-top-right-radius: 9%;
+        border-bottom-right-radius: 70%;
+        border-bottom-left-radius: 70%;
+        opacity: 0.9;
+      }
+      .content h3 {
+        margin: 0 0 10px;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 500;
+        color: black;
+      }
+      .content p {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        color: black;
+      }
+      .press {
+        display: block; /* Remove bullet points; allow greater control of positioning */
+        padding: 0; /* Override defaults for lists */
+        margin: 0; /* Override defaults for lists */
+        width: 80%; /* Get the row full width */
+      }
+      .press li {
+        display: inline-block; /* Get all images to show in a row */
+        width: 5%; /* Show 4 logos per row */
+        text-align: center; /* Centre align the images */
+      }
+      .lang-box {
+        background: white;
+        min-height: 300px;
+        max-width: 800px;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 30px;
+        width: 80%;
+        margin: 0 auto;
+        align-items: center;
+        box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+      .lang-box .head {
+        text-align: left;
+        padding: 10px;
+        margin: 20px;
+      }
+      .lang-container .lang-box h2 {
+        font-weight: bolder;
+        color: black;
+        font-size: 30px;
+      }
+      .lang-container .lang-box p {
+        color: rgb(82, 78, 78);
+      }
+      .lang-container .lang-box .lang-content {
+        position: relative;
+        width: 80%;
+        display: grid;
+        margin: 0 auto; 
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        grid-template-rows: auto;
+        grid-gap: 20px 40px;
+      }
+      .lang-container {
+        margin-top: 30px;
+        position: relative;
+      }
+      .button {
+        border: 3px solid #ff8a65;
+        border-radius: 50px;
+        color: #ff8a65;
+        background-color: white;
+        padding: 15px 35px;
+        margin: 0 10px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .button:hover {
+        border-radius: 50px;
+        background: #ff8a65;
+        color: #fff;
+      }
+
+      .button.favorite:after {
+        content: '\f004';
+        font-family: FontAwesome;
+        padding-left: 10px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="profile">
+        <amp-img
+          src="assets/profile-github.png"
+          width="150"
+          height="150"
+          alt="AMP by Example"
+          noloading
+        ></amp-img>
+        <div class="box">
+          <div class="content">
+            <h3>Takahiro Suzuki</h3>
+            <p>I'm a master student in electronic engineering from Japan</p>
+            <a href="https://funabashi800.github.io/" class="button favorite">Go to Blog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="cards">
+      <div class="background"></div>
+      <div class="background2"></div>
+      <div class="container">
+        <div class="box">
+          <div class="content">
+            <h2>01</h2>
+            <h3>Research</h3>
+            <p>I’m studying semiconductor engineering in Tokyo University of Science. My reserch goal is developing a simulator with Julia which can compute a quantum effect in an ultra small semiconductor device. And, I’m also studying machine learning to predict material property (ex, Band Gap), on the other hand, computing band structure with VASP (Ab Initio Simulator) is also my specialty.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content">
+            <h2>02</h2>
+            <h3>Experience</h3>
+            <p>As an electronics engineer, I've interned in "BOSCH" in Vietnam. And I also have an experience in "Rakuten" and "AWS" as a software enginner. When it comes to abroad experience, I've studied Chinease in Xian Jiaotong University with Sakura Science project, and I've studied English in EF Singapore</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content">
+            <h2>03</h2>
+            <h3>Hobby</h3>
+            <p>I'm crazy about Netflix, especially "Strainger Things", and I also love "Silicon Valley" in Amazon Prime Video. On the other hand, I also have an aspect of outdoor. I often climb mountain in summer season. In the rest of the season, I would spend a lot studying in my labratory which can be called almost "Hobby"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lang-container">
+      <div class="lang-box">
+        <div class="head">
+            <h2>My Stack</h2>
+            <p>Python for machine learning, Julia for scientific computing. And I have some experience with Web Development with Javascript (Vue, Nuxt, React), and backend with Python and Golang.</p>
+        </div>
+        <div class="lang-content">
+          <amp-img
+            src="assets/python.png"
+            width="60"
+            height="60"
+            alt="AMP by Example"
+            noloading
+            layout="fixed"
+          ></amp-img>
+          <amp-imgclear
+            src="assets/julia.png"
+            width="80"
+            height="80"
+            alt="AMP by Example"
+            noloading
+            layout="fixed"
+          ></amp-img>
+          <amp-img
+            src="assets/javascript.png"
+            width="60"
+            height="60"
+            alt="AMP by Example"
+            noloading
+            layout="fixed"
+          ></amp-img>
+          <amp-img
+            src="assets/dart.png"
+            width="60"
+            height="60"
+            alt="AMP by Example"
+            noloading
+            layout="fixed"
+          ></amp-img>
+          <amp-img
+            src="assets/golang.png"
+            width="60"
+            height="60"
+            alt="AMP by Example"
+            noloading
+            layout="fixed"
+          ></amp-img>
+          <amp-img
+            src="assets/docker.png"
+            width="70"
+            height="70"
+            alt="AMP by Example"
+            noloading
+            layout="fixed"
+          ></amp-img>
+          <amp-img
+            src="assets/firebase.png"
+            width="60"
+            height="60"
+            alt="AMP by Example"
+            noloading
+            layout="fixed"
+          ></amp-img>
+          <amp-img
+            src="assets/lambda.png"
+            width="60"
+            height="60"
+            alt="AMP by Example"
+            noloading
+            layout="fixed"
+          ></amp-img>
+          <amp-img
+            src="assets/gcp.png"
+            width="60"
+            height="60"
+            alt="AMP by Example"
+            noloading
+            layout="fixed"
+          ></amp-img>
+          <amp-img
+            src="assets/travis.png"
+            width="60"
+            height="60"
+            alt="AMP by Example"
+            layout="fixed"
+          ></amp-img>
+        </div>
+      </div>
+    </div>
+    <div class="social-logo">
+      <h2>
+        Social Meida
+      </h2>
+      <ul class="press">
+        <li>
+          <a href="https://www.facebook.com/takahiro810"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/takahiro-suzuki-aba781168"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/pijopijogogo/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/funabashi800"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
